@@ -1,0 +1,23 @@
+# Cấu hình deploy 1-click cho Render.com
+# Trên Render: New + → Blueprint → chọn repo này. Render sẽ đọc file này.
+services:
+  - type: web
+    name: botnava-ai
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      # PORT do Render tự cấp - không cần khai.
+      - key: GMAIL_USER
+        sync: false          # tự nhập trên dashboard (email gửi OTP)
+      - key: GMAIL_APP_PASSWORD
+        sync: false          # tự nhập trên dashboard (App Password 16 ký tự)
+      - key: DATABASE_URL
+        fromDatabase:
+          name: botnava-db
+          property: connectionString
+
+databases:
+  - name: botnava-db
+    plan: free
