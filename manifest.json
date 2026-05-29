@@ -1,0 +1,19 @@
+{
+  "name": "Nova AI — Trợ lý thông minh",
+  "short_name": "Nova AI",
+  "description": "Trợ lý AI thông minh Nova",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "orientation": "portrait",
+  "lang": "vi",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
