@@ -1,0 +1,7 @@
+# KHÔNG đẩy thông tin nhạy cảm / dữ liệu cục bộ lên GitHub
+email_config.json
+users.json
+*.session
+*.session-journal
+__pycache__/
+*.pyc
